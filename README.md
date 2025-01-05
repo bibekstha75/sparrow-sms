@@ -11,6 +11,22 @@ To install the package, run the following command in your Laravel project:
 composer require bibekshrestha/sparrow-sms
 ```
 
+## Service Provider
+
+### Automatic Discovery
+
+Laravel uses **Package Auto-Discovery**, so the service provider will be automatically discovered when you install the package. You do not need to manually add the provider in most cases.
+
+### Manual Discovery
+
+If auto-discovery does not work for any reason, you can manually add the service provider to your `config/app.php` file. Add the following line to the `providers` array:
+
+```php
+'providers' => [
+    // Other providers...
+    BibekShrestha\SparrowSms\SparrowSmsServiceProvider::class,
+],
+```
 ### Laravel Version Compatibility
 - Laravel 8.x, 9.x, 10.x
 
