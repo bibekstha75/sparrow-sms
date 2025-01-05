@@ -1,0 +1,56 @@
+{
+  "name": "bibekshrestha/sparrow-sms",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Bibekshrestha\\SparrowSms\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Bibek Shrestha",
+      "email": "bibekstha75@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "description": "A Laravel package for sending SMS using Sparrow SMS service.",
+  "keywords": [
+    "sms",
+    "sparrow",
+    "laravel",
+    "sms-service",
+    "bulk-sms"
+  ],
+  "require": {
+    "php": "^7.4|^8.0",
+    "guzzlehttp/guzzle": "^7.0",
+    "illuminate/support": "^8.0|^9.0|^10.0"
+  },
+  "suggest": {
+    "fideloper/proxy": "For handling proxy settings in Laravel applications.",
+    "laravel/laravel": "For Laravel framework compatibility."
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/bibekshrestha/sparrow-sms"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Bibekshrestha\\SparrowSms\\SparrowSmsServiceProvider"
+      ],
+      "aliases": {
+        "SparrowSms": "Bibekshrestha\\SparrowSms\\Facades\\SparrowSms"
+      }
+    }
+  }
+}
