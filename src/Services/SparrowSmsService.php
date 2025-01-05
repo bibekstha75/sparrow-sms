@@ -51,13 +51,13 @@ class SparrowSmsService implements SparrowSmsInterface
      */
     public function sendBulk(array $data): array
     {
-        if (!isset($data['recipient_number']) || !is_array($data['recipient_number'])) {
+        if (!isset($data['recipient_numbers']) || !is_array($data['recipient_number'])) {
             $this->logError('Please provide an array of recipient phone numbers for bulk SMS.');
             throw new Exception('Please provide an array of recipient phone numbers for bulk SMS.');
         }
 
         $bulkResponse = [];
-        foreach ($data['recipient_number'] as $phone) {
+        foreach ($data['recipient_numbers'] as $phone) {
             $singleData = [
                 'phone' => $phone,
                 'message' => $data['message'],
