@@ -35,12 +35,12 @@
     "optimize-autoloader": true,
     "preferred-install": "dist"
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "prefer-stable": true,
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/bibekshrestha/sparrow-sms"
+      "url": "https://github.com/bibekstha75/sparrow-sms"
     }
   ],
   "extra": {
