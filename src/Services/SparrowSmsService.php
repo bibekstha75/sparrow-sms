@@ -59,7 +59,7 @@ class SparrowSmsService implements SparrowSmsInterface
         $bulkResponse = [];
         foreach ($data['recipient_numbers'] as $phone) {
             $singleData = [
-                'phone' => $phone,
+                'recipient_number' => $phone,
                 'message' => $data['message'],
             ];
             $bulkResponse[] = $this->send($singleData);
